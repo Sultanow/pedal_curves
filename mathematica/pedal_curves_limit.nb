@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    222564,       5659]
-NotebookOptionsPosition[    222035,       5642]
-NotebookOutlinePosition[    222379,       5657]
-CellTagsIndexPosition[    222336,       5654]
+NotebookDataLength[    222616,       5659]
+NotebookOptionsPosition[    222087,       5642]
+NotebookOutlinePosition[    222431,       5657]
+CellTagsIndexPosition[    222388,       5654]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -147,14 +147,14 @@ Cell[BoxData[{
    RowBox[{"Limit", "[", 
     RowBox[{
      RowBox[{"intersect2", "[", 
-      RowBox[{"n", ",", "t"}], "]"}], ",", 
-     RowBox[{"t", "\[Rule]", "0"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+      RowBox[{"n", ",", "aa"}], "]"}], ",", 
+     RowBox[{"aa", "\[Rule]", "0"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Print", "[", "l", "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.830663098233959*^9, 3.8306631005082064`*^9}, {
   3.8306631630031457`*^9, 3.8306631722240295`*^9}, {3.830664073372614*^9, 
-  3.8306641018019767`*^9}},
- CellLabel->"In[63]:=",ExpressionUUID->"f6754c9e-076b-48c0-b663-f560d73c8302"],
+  3.8306641018019767`*^9}, {3.8306664971389027`*^9, 3.8306665003264303`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"f6754c9e-076b-48c0-b663-f560d73c8302"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -5657,9 +5657,9 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 4522, 134, 493, "Input",ExpressionUUID->"f6754c9e-076b-48c0-b663-f560d73c8302"],
-Cell[5105, 158, 1265, 21, 42, "Message",ExpressionUUID->"969151c2-44b9-495f-8316-211390382f01"],
-Cell[6373, 181, 215646, 5458, 5399, "Print",ExpressionUUID->"79d611c2-d141-425f-962c-7a96d3a36e10"]
+Cell[580, 22, 4574, 134, 493, "Input",ExpressionUUID->"f6754c9e-076b-48c0-b663-f560d73c8302"],
+Cell[5157, 158, 1265, 21, 42, "Message",ExpressionUUID->"969151c2-44b9-495f-8316-211390382f01"],
+Cell[6425, 181, 215646, 5458, 5399, "Print",ExpressionUUID->"79d611c2-d141-425f-962c-7a96d3a36e10"]
 }, Open  ]]
 }
 ]
