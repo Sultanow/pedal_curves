@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12120,        334]
-NotebookOptionsPosition[     11692,        318]
-NotebookOutlinePosition[     12036,        333]
-CellTagsIndexPosition[     11993,        330]
+NotebookDataLength[     20698,        521]
+NotebookOptionsPosition[     20073,        503]
+NotebookOutlinePosition[     20416,        518]
+CellTagsIndexPosition[     20373,        515]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -215,17 +215,96 @@ Cell[BoxData[{
      "\[IndentingNewLine]", ")"}]}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
+  RowBox[{"Manipulate", "[", 
    RowBox[{
-    RowBox[{"dynamicPlot", "[", 
-     RowBox[{"factor_", ",", "base_", ",", "amount_"}], "]"}], ":=", " ", 
-    RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{"generatePlot", "[", 
      RowBox[{
-      RowBox[{
-       RowBox[{"fnline", "[", "n_", "]"}], ":=", 
-       RowBox[{"n", "*", "factor"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"fnfact", "[", "n_", "]"}], ":=", 
+      RowBox[{"Function", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", "*", "factor"}]}], "]"}], ",", 
+      RowBox[{"Function", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"base", "^", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Floor", "[", 
+               RowBox[{"Log", "[", 
+                RowBox[{"base", ",", "n"}], "]"}], "]"}], "+", "1"}], ")"}]}],
+            "-", 
+           RowBox[{"base", "^", 
+            RowBox[{"Floor", "[", 
+             RowBox[{"Log", "[", 
+              RowBox[{"base", ",", "n"}], "]"}], "]"}]}]}], ")"}]}]}], "]"}], 
+      ",", "1", ",", "amount"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"factor", ",", "3", ",", " ", "\"\<Factor\>\""}], "}"}], ",", 
+      "1", ",", "100", ",", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"base", ",", "2", ",", " ", "\"\<Base\>\""}], "}"}], ",", "1", 
+      ",", "100", ",", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"amount", ",", "100", ",", " ", "\"\<Amount\>\""}], "}"}], ",",
+       "50", ",", "500", ",", "1"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"generatePlot", "[", 
+     RowBox[{
+      RowBox[{"Function", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", "^", "lineExponent"}]}], "]"}], ",", 
+      RowBox[{"Function", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"base", "^", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Floor", "[", 
+               RowBox[{"Log", "[", 
+                RowBox[{"base", ",", "n"}], "]"}], "]"}], "+", "1"}], ")"}]}],
+            "-", 
+           RowBox[{"base", "^", 
+            RowBox[{"Floor", "[", 
+             RowBox[{"Log", "[", 
+              RowBox[{"base", ",", "n"}], "]"}], "]"}]}]}], ")"}]}]}], "]"}], 
+      ",", "1", ",", "amount"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"lineExponent", ",", "2", ",", " ", "\"\<Line Exponent\>\""}], 
+       "}"}], ",", "1", ",", "100", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"base", ",", "2", ",", " ", "\"\<Base\>\""}], "}"}], ",", "1", 
+      ",", "100", ",", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"amount", ",", "100", ",", " ", "\"\<Amount\>\""}], "}"}], ",",
+       "50", ",", "500", ",", "1"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"generatePlot", "[", 
+    RowBox[{
+     RowBox[{"Function", "[", 
+      RowBox[{"n", ",", 
+       RowBox[{"lineBase", "^", "n"}]}], "]"}], ",", 
+     RowBox[{"Function", "[", 
+      RowBox[{"n", ",", 
        RowBox[{"n", "/", 
         RowBox[{"(", 
          RowBox[{
@@ -239,21 +318,13 @@ Cell[BoxData[{
           RowBox[{"base", "^", 
            RowBox[{"Floor", "[", 
             RowBox[{"Log", "[", 
-             RowBox[{"base", ",", "n"}], "]"}], "]"}]}]}], ")"}]}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"generatePlot", "[", 
-       RowBox[{"fnline", ",", " ", "fnfact", ",", "1", ",", " ", "amount"}], 
-       "]"}]}], "\[IndentingNewLine]", ")"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"dynamicPlot", "[", 
-    RowBox[{"factor", ",", "base", ",", "amount"}], "]"}], ",", " ", 
+             RowBox[{"base", ",", "n"}], "]"}], "]"}]}]}], ")"}]}]}], "]"}], 
+     ",", "1", ",", "amount"}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"factor", ",", "3", ",", " ", "\"\<Factor\>\""}], "}"}], ",", 
-     "1", ",", "100", ",", "1"}], "}"}], ",", " ", 
+      RowBox[{"lineBase", ",", "2", ",", " ", "\"\<Line Base\>\""}], "}"}], 
+     ",", "1", ",", "100", ",", "1"}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -264,7 +335,12 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"amount", ",", "100", ",", " ", "\"\<Amount\>\""}], "}"}], ",", 
      "50", ",", "500", ",", "1"}], "}"}]}], "]"}]}], "Input",
- CellLabel->"In[8]:=",ExpressionUUID->"3ee36a86-bc21-42ec-a9d0-8b02fd44f6aa"],
+ CellChangeTimes->{{3.831092465125968*^9, 3.831092465488002*^9}, 
+   3.8310924975146537`*^9, {3.8310926163326592`*^9, 3.8310926473752127`*^9}, {
+   3.831092705135661*^9, 3.8310928637248187`*^9}, {3.831093155905985*^9, 
+   3.831093172817709*^9}, {3.8310932030353165`*^9, 3.831093207972595*^9}, 
+   3.831093244140952*^9},
+ CellLabel->"In[39]:=",ExpressionUUID->"3ee36a86-bc21-42ec-a9d0-8b02fd44f6aa"],
 
 Cell[BoxData[
  TagBox[
@@ -279,22 +355,26 @@ Cell[BoxData[
        Hold[$CellContext`amount$$], 100, "Amount"}, 50, 500, 1}}, 
     Typeset`size$$ = {600., {154., 159.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`factor$11079$$ = 0, $CellContext`base$11080$$ = 
-    0, $CellContext`amount$11081$$ = 0}, 
+    True, $CellContext`factor$29509$$ = 0, $CellContext`base$29510$$ = 
+    0, $CellContext`amount$29511$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`amount$$ = 100, $CellContext`base$$ = 
         2, $CellContext`factor$$ = 3}, "ControllerVariables" :> {
-        Hold[$CellContext`factor$$, $CellContext`factor$11079$$, 0], 
-        Hold[$CellContext`base$$, $CellContext`base$11080$$, 0], 
-        Hold[$CellContext`amount$$, $CellContext`amount$11081$$, 0]}, 
+        Hold[$CellContext`factor$$, $CellContext`factor$29509$$, 0], 
+        Hold[$CellContext`base$$, $CellContext`base$29510$$, 0], 
+        Hold[$CellContext`amount$$, $CellContext`amount$29511$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, 
-      "Body" :> $CellContext`dynamicPlot[$CellContext`factor$$, \
-$CellContext`base$$, $CellContext`amount$$], 
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`generatePlot[
+        Function[$CellContext`n$, $CellContext`n$ $CellContext`factor$$], 
+        Function[$CellContext`n$, $CellContext`n$/($CellContext`base$$^(Floor[
+             Log[$CellContext`base$$, $CellContext`n$]] + 
+           1) - $CellContext`base$$^Floor[
+           Log[$CellContext`base$$, $CellContext`n$]])], 
+        1, $CellContext`amount$$], 
       "Specifications" :> {{{$CellContext`factor$$, 3, "Factor"}, 1, 100, 
          1}, {{$CellContext`base$$, 2, "Base"}, 1, 100, 
          1}, {{$CellContext`amount$$, 100, "Amount"}, 50, 500, 1}}, 
@@ -310,14 +390,119 @@ $CellContext`base$$, $CellContext`amount$$],
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.831089537088113*^9, {3.8310896053028965`*^9, 3.831089608469298*^9}, 
-   3.831089655716856*^9, 3.8310897212642317`*^9},
- CellLabel->"Out[14]=",ExpressionUUID->"f355b33e-944c-4570-84d5-6977712de0a9"]
+ CellChangeTimes->{3.831093246996414*^9, 3.8310932808340883`*^9, 
+  3.831093922279067*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"5e9f3eb8-70f4-4c15-9573-de6910520b51"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`amount$$ = 100, $CellContext`base$$ = 
+    2, $CellContext`lineExponent$$ = 2, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`lineExponent$$], 2, "Line Exponent"}, 1, 100, 1}, {{
+       Hold[$CellContext`base$$], 2, "Base"}, 1, 100, 1}, {{
+       Hold[$CellContext`amount$$], 100, "Amount"}, 50, 500, 1}}, 
+    Typeset`size$$ = {600., {154., 159.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`lineExponent$29546$$ = 0, $CellContext`base$29547$$ = 
+    0, $CellContext`amount$29548$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`amount$$ = 100, $CellContext`base$$ = 
+        2, $CellContext`lineExponent$$ = 2}, "ControllerVariables" :> {
+        Hold[$CellContext`lineExponent$$, $CellContext`lineExponent$29546$$, 
+         0], 
+        Hold[$CellContext`base$$, $CellContext`base$29547$$, 0], 
+        Hold[$CellContext`amount$$, $CellContext`amount$29548$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`generatePlot[
+        Function[$CellContext`n$, \
+$CellContext`n$^$CellContext`lineExponent$$], 
+        Function[$CellContext`n$, $CellContext`n$/($CellContext`base$$^(Floor[
+             Log[$CellContext`base$$, $CellContext`n$]] + 
+           1) - $CellContext`base$$^Floor[
+           Log[$CellContext`base$$, $CellContext`n$]])], 
+        1, $CellContext`amount$$], 
+      "Specifications" :> {{{$CellContext`lineExponent$$, 2, "Line Exponent"},
+          1, 100, 1}, {{$CellContext`base$$, 2, "Base"}, 1, 100, 
+         1}, {{$CellContext`amount$$, 100, "Amount"}, 50, 500, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{651., {229., 235.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.831093246996414*^9, 3.8310932808340883`*^9, 
+  3.831093922951212*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"17735853-3d28-4676-b1d2-a697cc6d16ff"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`amount$$ = 100, $CellContext`base$$ = 
+    2, $CellContext`lineBase$$ = 2, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`lineBase$$], 2, "Line Base"}, 1, 100, 1}, {{
+       Hold[$CellContext`base$$], 2, "Base"}, 1, 100, 1}, {{
+       Hold[$CellContext`amount$$], 100, "Amount"}, 50, 500, 1}}, 
+    Typeset`size$$ = {600., {154., 159.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`lineBase$29706$$ = 0, $CellContext`base$29707$$ = 
+    0, $CellContext`amount$29708$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`amount$$ = 100, $CellContext`base$$ = 
+        2, $CellContext`lineBase$$ = 2}, "ControllerVariables" :> {
+        Hold[$CellContext`lineBase$$, $CellContext`lineBase$29706$$, 0], 
+        Hold[$CellContext`base$$, $CellContext`base$29707$$, 0], 
+        Hold[$CellContext`amount$$, $CellContext`amount$29708$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`generatePlot[
+        Function[$CellContext`n$, $CellContext`lineBase$$^$CellContext`n$], 
+        Function[$CellContext`n$, $CellContext`n$/($CellContext`base$$^(Floor[
+             Log[$CellContext`base$$, $CellContext`n$]] + 
+           1) - $CellContext`base$$^Floor[
+           Log[$CellContext`base$$, $CellContext`n$]])], 
+        1, $CellContext`amount$$], 
+      "Specifications" :> {{{$CellContext`lineBase$$, 2, "Line Base"}, 1, 100,
+          1}, {{$CellContext`base$$, 2, "Base"}, 1, 100, 
+         1}, {{$CellContext`amount$$, 100, "Amount"}, 50, 500, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{651., {229., 235.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.831093246996414*^9, 3.8310932808340883`*^9, 
+  3.8310939234057436`*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"284e3f48-7a58-4c41-aed8-38e3a7df53b0"]
 }, Open  ]]
 },
-WindowSize->{2560, 1357},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{2544, 1357},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -333,8 +518,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 8628, 244, 675, "Input",ExpressionUUID->"3ee36a86-bc21-42ec-a9d0-8b02fd44f6aa"],
-Cell[9211, 268, 2465, 47, 483, "Output",ExpressionUUID->"f355b33e-944c-4570-84d5-6977712de0a9"]
+Cell[580, 22, 11309, 320, 637, "Input",ExpressionUUID->"3ee36a86-bc21-42ec-a9d0-8b02fd44f6aa"],
+Cell[11892, 344, 2687, 50, 483, "Output",ExpressionUUID->"5e9f3eb8-70f4-4c15-9573-de6910520b51"],
+Cell[14582, 396, 2761, 52, 483, "Output",ExpressionUUID->"17735853-3d28-4676-b1d2-a697cc6d16ff"],
+Cell[17346, 450, 2711, 50, 483, "Output",ExpressionUUID->"284e3f48-7a58-4c41-aed8-38e3a7df53b0"]
 }, Open  ]]
 }
 ]
