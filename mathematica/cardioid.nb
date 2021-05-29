@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     53935,        994]
-NotebookOptionsPosition[     53510,        978]
-NotebookOutlinePosition[     53851,        993]
-CellTagsIndexPosition[     53808,        990]
+NotebookDataLength[     54052,        997]
+NotebookOptionsPosition[     53627,        981]
+NotebookOutlinePosition[     53968,        996]
+CellTagsIndexPosition[     53925,        993]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,7 +31,9 @@ Cell[BoxData[{
         RowBox[{"Cos", "[", "t", "]"}]}], ")"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"t", ",", "0", ",", 
-       RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Blue"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"plotCardioidSin", "=", 
    RowBox[{"PolarPlot", "[", 
@@ -42,7 +44,9 @@ Cell[BoxData[{
         RowBox[{"Sin", "[", "t", "]"}]}], ")"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"t", ",", "0", ",", 
-       RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Blue"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{"GraphicsGrid", "[", 
   RowBox[{"{", 
    RowBox[{"{", 
@@ -52,15 +56,15 @@ Cell[BoxData[{
   3.831260879397125*^9, 3.8312609895356903`*^9}, {3.8312610410891*^9, 
   3.8312610430892997`*^9}, {3.8312611820893297`*^9, 3.8312611948556128`*^9}, {
   3.8312612301706133`*^9, 3.831261267735614*^9}, {3.8312613394252553`*^9, 
-  3.8312615145313115`*^9}, {3.8312631711946845`*^9, 3.8312631764799733`*^9}},
- CellLabel->"In[23]:=",ExpressionUUID->"e8c041e5-4ef1-482a-a2bc-5f1424eec8ad"],
+  3.8312615145313115`*^9}, {3.8312631711946845`*^9, 3.8312631764799733`*^9}, {
+  3.831286621543351*^9, 3.831286626883589*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"e8c041e5-4ef1-482a-a2bc-5f1424eec8ad"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {InsetBox[
      GraphicsBox[{{{{}, {}}, {}, {{}, {}, 
          TagBox[
-          {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
-           LineBox[CompressedData["
+          {RGBColor[0, 0, 1], AbsoluteThickness[1.6], LineBox[CompressedData["
 1:eJw0m3c81f/7/zPKTJSEjCgpGkblLeWqpKRIKJVRIrNBFJmVTbYiKSNkZm/O
 Ze+99zjnGFmHyK6+53P73X7nn3Put+fr9Xw+r+t6XNfzev5xhB49V39Mu23b
 NlH6bdv+9/3/Pgvw/3/JOpcf2fhHATorxnuBQQ8g4ALbtykqu65dJHgEPQfa
@@ -425,7 +429,7 @@ JldehA==
             "]]},
           
           Annotation[#, 
-           "Charting`Private`Tag$7423#1"]& ]}, {}, {{{}, {}, {}, {}}, {}}}, \
+           "Charting`Private`Tag$4568#1"]& ]}, {}, {{{}, {}, {}, {}}, {}}}, \
 {}},
       Axes->True,
       AxesOrigin->{0, 0},
@@ -513,8 +517,7 @@ JldehA==
      ImageScaled[{0.5, 0.5}], {360., 363.7306013269502}], InsetBox[
      GraphicsBox[{{{{}, {}}, {}, {{}, {}, 
          TagBox[
-          {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], 
-           LineBox[CompressedData["
+          {RGBColor[0, 0, 1], AbsoluteThickness[1.6], LineBox[CompressedData["
 1:eJw0l3c81m/Ux0klFUVRISuEECmRcaSUX0kyotKQzCgzDRklEpKSUbay9573
 sffee923PW5lJtXzfV7P6/EPb9/7/l7Xdc7nfM65eO8/1jTaQkNDc2wrDc3/
 /v6/nxH4/7+mTazTx+hHYGVC4JNg1FUItrr3pHTPCLSPmG3JSb8L+dxbOG25
@@ -880,7 +883,7 @@ v0jAZw==
             "]]},
           
           Annotation[#, 
-           "Charting`Private`Tag$7446#1"]& ]}, {}, {{{}, {}, {}, {}}, {}}}, \
+           "Charting`Private`Tag$4604#1"]& ]}, {}, {{{}, {}, {}, {}}, {}}}, \
 {}},
       Axes->True,
       AxesOrigin->{0, 0},
@@ -972,8 +975,8 @@ v0jAZw==
     UpTo[360]},
   PlotRangePadding->{6, 5}]], "Output",
  CellChangeTimes->{{3.831261411843275*^9, 3.831261433750575*^9}, 
-   3.8312615176207547`*^9, 3.831263178729473*^9},
- CellLabel->"Out[25]=",ExpressionUUID->"733eec1e-4121-4a01-b310-e7ce83352a3f"]
+   3.8312615176207547`*^9, 3.831263178729473*^9, 3.831286630553283*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"d790c74c-d417-40a8-9422-52be77367c1c"]
 }, Open  ]]
 },
 WindowSize->{1352, 853},
@@ -993,12 +996,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1311, 33, 119, "Input",ExpressionUUID->"e8c041e5-4ef1-482a-a2bc-5f1424eec8ad"],
-Cell[1894, 57, 51600, 918, 334, "Output",ExpressionUUID->"733eec1e-4121-4a01-b310-e7ce83352a3f"]
+Cell[580, 22, 1472, 38, 119, "Input",ExpressionUUID->"e8c041e5-4ef1-482a-a2bc-5f1424eec8ad"],
+Cell[2055, 62, 51556, 916, 367, "Output",ExpressionUUID->"d790c74c-d417-40a8-9422-52be77367c1c"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
