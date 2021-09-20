@@ -92,6 +92,8 @@ def normalize(coeffs):
 
 print(normalize(get_coeffs_red()))
 
+#%%
+print(get_coeffs_red())
 
 #%%
 def triplets(size):
@@ -287,12 +289,10 @@ def drawbezout(fig, axs):
     """
     Illustrates the theorem of Bezout for two quadratic tropical curves.
     """
-    from random import uniform as u
-    deg = 2
+    deg = 6
     pwr = exponents(deg)
     pcff = []
     qcff = []
-    # qcff = [u(-1, +1) for p in pwr]
     for expdeg in pwr:
         pcff.append(expdeg[0]**2 + expdeg[1]**2)
         qcff.append((3 - expdeg[0])**2 - (3 - expdeg[1])**2)
@@ -307,25 +307,22 @@ def drawstable(fig, axs):
     """
     Illustrates the stable intersection of a cubic with itself.
     """
-    from random import uniform as u
-    deg = 3
+    deg = 6
     pwr = exponents(deg)
-    while True:
-        pcff = [u(-1, +1) for p in pwr]
-        pnodes = computenodes(pwr,pcff)
-        showcurve(fig,axs,pnodes,pwr,pcff,True)
-        fig.canvas.draw()
-        # qnodes = nearbynodes(pnodes)
-        qcff = []
-        for pc in pcff:
-            qcff.append(pc + u(+0.6,+0.8))
-        qnodes = computenodes(pwr,qcff)
-        showcurve(fig,axs,qnodes,pwr,qcff,False)
-        fig.canvas.draw()
-        ans = raw_input('one other random case ? (y/n) ')
-        if(ans != 'y'): break
-        fig = plt.figure()
-        axs = fig.add_subplot(111)
+    pcff = normalize(get_coeffs_red)
+    pnodes = computenodes(pwr,pcff)
+    showcurve(fig,axs,pnodes,pwr,pcff,True)
+    fig.canvas.draw()
+    
+    # qnodes = nearbynodes(pnodes)
+    #qcff = []
+    #for pc in pcff:
+    #    qcff.append(pc + u(+0.6,+0.8))
+    #qnodes = computenodes(pwr,qcff)
+    #showcurve(fig,axs,qnodes,pwr,qcff,False)
+    #fig.canvas.draw()
+    fig = plt.figure()
+    axs = fig.add_subplot(111)
 
 #%%
 #plot tropical curve
@@ -333,6 +330,7 @@ def drawcurve(fig, axs):
     pwr = exponents(6)
     print('the exponents :', pwr)
     prb = False
+    i = 0
     while True:
         if(prb != True):
             cff = normalize(get_coeffs_red())
@@ -346,6 +344,8 @@ def drawcurve(fig, axs):
         for ind in range(len(nodes)):
             node = nodes[ind]
             print('node', ind, 'is', node)
+        print(i)
+        i+=1
         showcurve(fig, axs, nodes, pwr, cff)
         fig = plt.figure()
         axs = fig.add_subplot(111)
@@ -354,14 +354,8 @@ def drawcurve(fig, axs):
 plt.ion()
 fig = plt.figure()
 axs = fig.add_subplot(111)
-ans = raw_input("see an illustration of Bezout's theorem ? (y/n) ")
-if(ans == 'y'):
-    drawbezout(fig, axs)
-else:
-    ans = raw_input("see an illustration of stable intersection ? (y/n) ")
-    if(ans == 'y'):
-        drawstable(fig, axs)
-    else:
-        drawcurve(fig, axs)
+#drawbezout(fig, axs)
+#drawstable(fig, axs)
+drawcurve(fig, axs)
 
 # %%
