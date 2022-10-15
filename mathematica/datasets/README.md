@@ -59,4 +59,4 @@ with open (temp_folder + "313.csv", "a") as file_handle :
 
 # The final dataset for Equal Sums of Powers (3,1,3)
 
-The final dataset of Equal Sums of Powers (3,1,3) is available at Kaggle: [Link for Equal Sums of Powers (3,1,3)](https://www.kaggle.com/datasets/eldarsultanow/equal-sums-of-powers-313).
+The final dataset for Equal Sums of Powers (3,1,3) is available at Kaggle: [Equal Sums of Powers (3,1,3)](https://www.kaggle.com/datasets/eldarsultanow/equal-sums-of-powers-313).
