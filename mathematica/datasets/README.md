@@ -31,7 +31,7 @@ for file_name in file_list:
     z.extractall(temp_folder)
 ```
 
-The following script merges the downloaded the data:
+The following script merges the downloaded data:
 
 ```python
 temp_folder = "C:/Temp/"
@@ -56,5 +56,7 @@ for file_name in file_list :
 with open (temp_folder + "313.csv", "a") as file_handle : 
   file_handle.write(data)
 ```
+
+# The final dataset for Equal Sums of Powers (3,1,3)
 
 The final dataset of Equal Sums of Powers (3,1,3) is available at Kaggle: [Link for Equal Sums of Powers (3,1,3)](https://www.kaggle.com/datasets/eldarsultanow/equal-sums-of-powers-313).
