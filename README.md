@@ -3,10 +3,10 @@
 Code, notebooks and data for **[Arithmetic Envelopes on the Circle: An Introduction](doc/Pedal_Curves.pdf)** and for the related article on *Diophantine imaging* ([Scientific Reports, 2024](https://doi.org/10.1038/s41598-023-49960-y)).
 
 <p align="center">
-  <img src="img/image1.png" width="23%">
-  <img src="img/image2.png" width="23%">
-  <img src="img/image3.png" width="23%">
-  <img src="img/primes.png" width="23%">
+  <img src="img/image1.png" height="180">
+  <img src="img/image2.png" height="180">
+  <img src="img/image3.png" height="180">
+  <img src="img/primes.png" height="180">
 </p>
 
 Place numbers on a circle and join each label $x$ to the label of $g(x)$. The curve that every chord touches is an *arithmetic envelope*. For $x \mapsto kx \bmod 1$ it is an epicycloid: the cardioid for $k=2$, the nephroid for $k=3$. Labelling the odd integers by their binary digits identifies them with the Prüfer 2-group. In these coordinates, multiplication by 3 is conjugate to the rotation by $\log_2 3$. The main result of the paper (Theorem 1, *Henkel's convexoid*) shows that the chords $x \to 3x$ leave free a convex region, bounded by the segment $[-\tfrac17, \tfrac15]$ and two epicycloid arcs. The heart-shaped pedal curve of the same chord family lies on the algebraic curves $x = \rho\,T_5(\rho)$ and $x = \rho\,T_7(\rho)$.
@@ -25,9 +25,9 @@ Place numbers on a circle and join each label $x$ to the label of $g(x)$. The cu
 
 ## Artifacts by section of the paper
 
-| § | Topic | Artifacts |
+| Section | Topic | Artifacts |
 | --- | --- | --- |
-| 2–3 | Chord families, envelopes, caustics of $\times2$, $\times3$, $\times k$ | [`caustics_simple.ipynb`](python/notebooks/caustics_simple.ipynb), [`caustics.ipynb`](python/notebooks/caustics.ipynb) |
+| 2⁠–⁠3 | Chord families, envelopes, caustics of $\times2$, $\times3$, $\times k$ | [`caustics_simple.ipynb`](python/notebooks/caustics_simple.ipynb), [`caustics.ipynb`](python/notebooks/caustics.ipynb) |
 | 4 | Dyadic labelling and the Prüfer 2-group | [`prüfer_group_operator.nb`](mathematica/pr%C3%BCfer_group_operator.nb), [`circle_numbers.nb`](mathematica/circle_numbers.nb), [`pruefer_group_p2p3.nb`](mathematica/pruefer_group_p2p3.nb), [`caustics_base2_3.ipynb`](python/notebooks/caustics_base2_3.ipynb) |
 | 5 | **Henkel's convexoid** (Theorem 1) | [`python/programs/convexoid/`](python/programs/convexoid) (see below) |
 | 6 | Heart-shaped pedal curve and its polynomials | [`heartshape_red_blue.nb`](mathematica/heartshape_red_blue.nb), [`heartshape_red_blue_polynomial.nb`](mathematica/heartshape_red_blue_polynomial.nb) |
