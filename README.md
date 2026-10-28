@@ -1,6 +1,13 @@
 # Arithmetic Envelopes on the Circle
 
-Code, notebooks and data for **[Arithmetic Envelopes on the Circle: An Introduction](doc/Pedal_Curves.pdf)** and for the related article on *Diophantine imaging* ([Scientific Reports, 2024](https://doi.org/10.1038/s41598-023-49960-y)).
+[![Preprint](https://img.shields.io/badge/Preprints.org-202610.2366-orange)](https://www.preprints.org/manuscript/202610.2366)
+[![DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202610.2366.v2-blue)](https://doi.org/10.20944/preprints202610.2366.v2)
+[![License: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
+
+> **Paper:** E. G. Sultanow, *Arithmetic Envelopes on the Circle: An Introduction*. Preprints (2026), [doi:10.20944/preprints202610.2366.v2](https://doi.org/10.20944/preprints202610.2366.v2).
+> **Read it on [Preprints.org](https://www.preprints.org/manuscript/202610.2366).** The code in this repository reproduces the computations and figures of the paper.
+
+Code, notebooks and data for **[Arithmetic Envelopes on the Circle: An Introduction](https://www.preprints.org/manuscript/202610.2366)** and for the related article on *Diophantine imaging* ([Scientific Reports, 2024](https://doi.org/10.1038/s41598-023-49960-y)).
 
 <p align="center">
   <img src="img/image1.png" height="180">
@@ -11,11 +18,32 @@ Code, notebooks and data for **[Arithmetic Envelopes on the Circle: An Introduct
 
 Place numbers on a circle and join each label $x$ to the label of $g(x)$. The curve that every chord touches is an *arithmetic envelope*. For $x \mapsto kx \bmod 1$ it is an epicycloid: the cardioid for $k=2$, the nephroid for $k=3$. Labelling the odd integers by their binary digits identifies them with the Prüfer 2-group. In these coordinates, multiplication by 3 is conjugate to the rotation by $\log_2 3$. The main result of the paper (Theorem 1, *Henkel's convexoid*) shows that the chords $x \to 3x$ leave free a convex region, bounded by the segment $[-\tfrac17, \tfrac15]$ and two epicycloid arcs. The heart-shaped pedal curve of the same chord family lies on the algebraic curves $x = \rho\,T_5(\rho)$ and $x = \rho\,T_7(\rho)$.
 
+## Paper
+
+**Arithmetic Envelopes on the Circle: An Introduction**
+Eldar Gunter Sultanow · Preprints.org, version 2, posted 27 October 2026 (not peer-reviewed)
+
+**[Preprints.org](https://www.preprints.org/manuscript/202610.2366)** · [DOI 10.20944/preprints202610.2366.v2](https://doi.org/10.20944/preprints202610.2366.v2) · [local PDF](doc/Pedal_Curves.pdf)
+
+#### Citation
+
+```bibtex
+@article{sultanow2026envelopes,
+  title   = {Arithmetic Envelopes on the Circle: An Introduction},
+  author  = {Sultanow, Eldar Gunter},
+  journal = {Preprints},
+  year    = {2026},
+  month   = oct,
+  doi     = {10.20944/preprints202610.2366.v2},
+  url     = {https://www.preprints.org/manuscript/202610.2366}
+}
+```
+
 ## Repository layout
 
 | Folder | Content |
 | --- | --- |
-| [`doc/`](doc) | The paper (PDF) |
+| [`doc/`](doc) | The paper (PDF); published version on [Preprints.org](https://www.preprints.org/manuscript/202610.2366) |
 | [`python/programs/`](python/programs) | Standalone scripts that reproduce results of the paper |
 | [`python/notebooks/`](python/notebooks) | Jupyter notebooks for drawing dreamcatchers and envelopes |
 | [`mathematica/`](mathematica) | Wolfram notebooks: derivations, implicitizations, plots |
